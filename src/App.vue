@@ -6,10 +6,10 @@
           <router-link to="/olts" exact class="item">
            <i class="tasks icon"></i> OLT
           </router-link>
-          <router-link to="/ofccc" exact class="item">
+          <router-link to="/ofcccs" exact class="item">
            <i class="tasks icon"></i> ofccc
           </router-link>
-          <router-link to="/sdp" exact class="item">
+          <router-link to="/sdps" exact class="item">
            <i class="tasks icon"></i> SDP
           </router-link>
         </div>

@@ -48,42 +48,42 @@ export default new Router({
       component: EditOlt
     },
     {
-      path: '/ofccc',
+      path: '/ofcccs',
       name: 'ofccc',
       component: Ofccc
     },
     {
-      path: '/ofccc/new',
+      path: '/ofcccs/new',
       name: 'new-ofccc',
       component: NewOfccc
     },
     {
-      path: '/ofccc/:id',
+      path: '/ofcccs/:id',
       name: 'show-ofccc',
       component: ShowOfccc
     },
     {
-      path: '/ofccc/:id/edit',
+      path: '/ofcccs/:id/edit',
       name: 'edit-ofccc',
       component: EditOfccc
     },
     {
-      path: '/sdp',
+      path: '/sdps',
       name: 'sdp',
       component: Sdp
     },
     {
-      path: '/sdp/new',
+      path: '/sdps/new',
       name: 'new-sdp',
       component: NewSdp
     },
     {
-      path: '/sdp/:id',
+      path: '/sdps/:id',
       name: 'show-sdp',
       component: ShowSdp
     },
     {
-      path: '/sdp/:id/edit',
+      path: '/sdps/:id/edit',
       name: 'edit-sdp',
       component: EditSdp
     }
