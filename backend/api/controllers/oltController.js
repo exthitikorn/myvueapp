@@ -35,7 +35,7 @@ exports.update_a_olt = (req, res)=> {
     )
 }
 
-exports.delete_a_task = (req, res)=>{
+exports.delete_a_olt = (req, res)=>{
     olt.deleteOne({_id: req.params.oltId}, err =>{
         if(err) res.send(err);
         res.json({

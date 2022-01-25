@@ -14,15 +14,15 @@ const oltSchema = new Schema(
         },
         olt_Shelf: {
             type: String,
-            required: 'Rack cannot be blank'
+            required: 'shelf cannot be blank'
         },
         olt_Slot: {
             type: String,
-            required: 'Rack cannot be blank'
+            required: 'Slot cannot be blank'
         },
         olt_Port: {
             type: String,
-            required: 'Rack cannot be blank'
+            required: 'Port cannot be blank'
         },
     },
     { collection: 'olt' }

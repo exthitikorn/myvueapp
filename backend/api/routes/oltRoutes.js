@@ -9,5 +9,5 @@ module.exports = app => {
         .route('/olts/:oltId')
         .get(oltBuilder.read_a_olt)
         .put(oltBuilder.update_a_olt)
-        .delete(oltBuilder.delete_a_task);
+        .delete(oltBuilder.delete_a_olt);
 }
