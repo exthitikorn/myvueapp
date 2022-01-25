@@ -4,8 +4,10 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 global.Olt = require('./api/models/oltModel');
 global.Ofccc = require('./api/models/ofcccModel');
+global.Sdp = require('./api/models/sdpModel');
 const oltroutes = require('./api/routes/oltRoutes');
 const ofcccroutes = require('./api/routes/ofcccRoutes');
+const sdproutes = require('./api/routes/sdpRoutes');
 
 mongoose.connect(
     'mongodb://localhost/myapp',
@@ -21,6 +23,7 @@ app.use(bodyParser.json())
 
 oltroutes(app);
 ofcccroutes(app);
+sdproutes(app);
 app.listen(port);
 
 app.use((req, res)=>{
