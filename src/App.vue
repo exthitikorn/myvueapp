@@ -4,13 +4,16 @@
       <div class="ui center aligned container">
         <div class="ui large secondary inverted pointing menu compact">
           <router-link to="/olts" exact class="item">
-           <i class="tasks icon"></i> OLT
+            <i class="tasks icon"></i> OLT
           </router-link>
           <router-link to="/ofcccs" exact class="item">
-           <i class="tasks icon"></i> ofccc
+            <i class="tasks icon"></i> ofccc
           </router-link>
           <router-link to="/sdps" exact class="item">
-           <i class="tasks icon"></i> SDP
+            <i class="tasks icon"></i> SDP
+          </router-link>
+          <router-link to="/users" exact class="item">
+            <i class="tasks icon"></i> User
           </router-link>
         </div>
       </div>
@@ -24,11 +27,13 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
-  name: 'app'
+  name: "app",
 };
 </script>
+
 <style>
 #app > div.navbar {
   margin-bottom: 1.5em;

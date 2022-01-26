@@ -1,31 +1,32 @@
 <template>
-    <div>
-        <h1>Edit ofccc</h1>
-        <ofccc-form @createOrUpdate="createOrUpdate" :ofccc=this.ofccc></ofccc-form>
-    </div>
+  <div>
+    <h1>Edit ofccc</h1>
+    <ofccc-form @createOrUpdate="createOrUpdate" :ofccc="this.ofccc"></ofccc-form>
+  </div>
 </template>
+
 <script>
-import ofccc from '../components/FormOfccc.vue'
-import { api } from '../helpers/Helpers';
+import ofccc from "../components/FormOfccc.vue";
+import { api } from "../helpers/Helpers";
 export default {
-  name: 'edit-ofccc',
+  name: "edit-ofccc",
   components: {
-    'ofccc-form': ofccc,
+    "ofccc-form": ofccc,
   },
-  data: function() {
+  data: function () {
     return {
-      ofccc: {}
+      ofccc: {},
     };
   },
   methods: {
-    createOrUpdate: async function(ofccc) {
+    createOrUpdate: async function (ofccc) {
       await api.updateofccc(ofccc);
-      this.flash('ofccc updated sucessfully!', 'success');
+      this.flash("ofccc updated sucessfully!", "success");
       this.$router.push(`/ofcccs/${ofccc._id}`);
-    }
+    },
   },
   async mounted() {
     this.ofccc = await api.getofccc(this.$route.params.id);
-  }
+  },
 };
 </script>

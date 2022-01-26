@@ -15,6 +15,11 @@ import Sdp from './views/Sdp.vue';
 import NewSdp from './views/NewSdp.vue';
 import ShowSdp from './views/ShowSdp.vue';
 import EditSdp from './views/EditSdp.vue';
+//User
+import User from './views/User.vue';
+import NewUser from './views/NewUser.vue';
+import ShowUser from './views/ShowUser.vue';
+import EditUser from './views/EditUser.vue';
 
 Vue.use(Router);
 
@@ -27,6 +32,7 @@ export default new Router({
       path: '/',
       redirect: '/olts'
     },
+    //OLT Routes
     {
       path: '/olts',
       name: 'olts',
@@ -47,6 +53,7 @@ export default new Router({
       name: 'edit-olt',
       component: EditOlt
     },
+    //ofccc Routes
     {
       path: '/ofcccs',
       name: 'ofccc',
@@ -67,6 +74,7 @@ export default new Router({
       name: 'edit-ofccc',
       component: EditOfccc
     },
+    //SDP Routes
     {
       path: '/sdps',
       name: 'sdp',
@@ -86,6 +94,27 @@ export default new Router({
       path: '/sdps/:id/edit',
       name: 'edit-sdp',
       component: EditSdp
+    },
+    //User Routes
+    {
+      path: '/users',
+      name: 'user',
+      component: User
+    },
+    {
+      path: '/users/new',
+      name: 'new-user',
+      component: NewUser
+    },
+    {
+      path: '/users/:id',
+      name: 'show-user',
+      component: ShowUser
+    },
+    {
+      path: '/users/:id/edit',
+      name: 'edit-user',
+      component: EditUser
     }
    
   ]

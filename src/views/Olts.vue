@@ -26,19 +26,13 @@
           <td>{{ olt.olt_Port }}</td>
           <td width="75" class="center aligned">
             <router-link :to="{ name: 'show-olt', params: { id: olt._id } }"
-              >Show</router-link
-            >
+              >Show</router-link>
           </td>
           <td width="75" class="center aligned">
             <router-link :to="{ name: 'edit-olt', params: { id: olt._id } }"
-              >Edit</router-link
-            >
+              >Edit</router-link>
           </td>
-          <td
-            width="75"
-            class="center aligned"
-            @click.prevent="onDestroy(olt._id)"
-          >
+          <td width="75" class="center aligned" @click.prevent="onDestroy(olt._id)">
             <a :href="`/olts/${olt._id}`">Delete</a>
           </td>
         </tr>
@@ -47,6 +41,7 @@
     <div v-else>You don't have any OLT!.</div>
   </div>
 </template>
+
 <script>
 import { api } from "../helpers/Helpers";
 export default {

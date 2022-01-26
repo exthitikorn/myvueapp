@@ -1,16 +1,16 @@
 <template>
-    <div>
-        <h1>SDP</h1>
-        <a href="/sdps/new" class="positive ui button">New</a>
-        <flash-message></flash-message>
+  <div>
+    <h1>SDP</h1>
+    <a href="/sdps/new" class="positive ui button">New</a>
+    <flash-message></flash-message>
     <br />
     <div v-if="sdps.length > 0">
       <table id="sdps" class="ui celled compact table">
         <thead>
           <tr>
             <th><i class=""></i>Type</th>
-            <th><i class=""></i>Lat</th>
-            <th><i class=""></i>Lng</th>
+            <th><i class=""></i>Lattitude</th>
+            <th><i class=""></i>Longitude</th>
             <th><i class=""></i>ofccc ID</th>
             <th><i class="info circle icon"></i></th>
             <th><i class="edit icon"></i></th>
@@ -24,26 +24,20 @@
           <td>{{ sdp.ofccc_id }}</td>
           <td width="75" class="center aligned">
             <router-link :to="{ name: 'show-sdp', params: { id: sdp._id } }"
-              >Show</router-link
-            >
+              >Show</router-link>
           </td>
           <td width="75" class="center aligned">
             <router-link :to="{ name: 'edit-sdp', params: { id: sdp._id } }"
-              >Edit</router-link
-            >
+              >Edit</router-link>
           </td>
-          <td
-            width="75"
-            class="center aligned"
-            @click.prevent="onDestroy(sdp._id)"
-          >
+          <td width="75" class="center aligned" @click.prevent="onDestroy(sdp._id)">
             <a :href="`/sdps/${sdp._id}`">Delete</a>
           </td>
         </tr>
       </table>
     </div>
     <div v-else>You don't have any SDP!.</div>
-    </div>
+  </div>
 </template>
 
 <script>

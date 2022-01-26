@@ -1,31 +1,32 @@
 <template>
-    <div>
-        <h1>Edit SDP</h1>
-        <sdp-form @createOrUpdate="createOrUpdate" :sdp=this.sdp></sdp-form>
-    </div>
+  <div>
+    <h1>Edit SDP</h1>
+    <sdp-form @createOrUpdate="createOrUpdate" :sdp="this.sdp"></sdp-form>
+  </div>
 </template>
+
 <script>
-import sdp from '../components/FormSdp.vue'
-import { api } from '../helpers/Helpers';
+import sdp from "../components/FormSdp.vue";
+import { api } from "../helpers/Helpers";
 export default {
-  name: 'edit-sdp',
+  name: "edit-sdp",
   components: {
-    'sdp-form': sdp,
+    "sdp-form": sdp,
   },
-  data: function() {
+  data: function () {
     return {
-      sdp: {}
+      sdp: {},
     };
   },
   methods: {
-    createOrUpdate: async function(sdp) {
+    createOrUpdate: async function (sdp) {
       await api.updatesdp(sdp);
-      this.flash('SDP updated sucessfully!', 'success');
+      this.flash("SDP updated sucessfully!", "success");
       this.$router.push(`/sdps/${sdp._id}`);
-    }
+    },
   },
   async mounted() {
     this.sdp = await api.getsdp(this.$route.params.id);
-  }
+  },
 };
 </script>

@@ -2,32 +2,32 @@
   <div>
     <h1>Edit OLT</h1>
     <flash-message></flash-message>
-    <olt-form @createOrUpdate="createOrUpdate" :olt=this.olt></olt-form>
+    <olt-form @createOrUpdate="createOrUpdate" :olt="this.olt"></olt-form>
   </div>
 </template>
 
 <script>
-import olt from '../components/FormOlt.vue'
-import { api } from '../helpers/Helpers';
+import olt from "../components/FormOlt.vue";
+import { api } from "../helpers/Helpers";
 export default {
-  name: 'edit-olt',
+  name: "edit-olt",
   components: {
-    'olt-form': olt,
+    "olt-form": olt,
   },
-  data: function() {
+  data: function () {
     return {
-      olt: {}
+      olt: {},
     };
   },
   methods: {
-    createOrUpdate: async function(olt) {
+    createOrUpdate: async function (olt) {
       await api.updateolt(olt);
-      this.flash('OLT updated sucessfully!', 'success');
+      this.flash("OLT updated sucessfully!", "success");
       this.$router.push(`/olts/${olt._id}`);
-    }
+    },
   },
   async mounted() {
     this.olt = await api.getolt(this.$route.params.id);
-  }
+  },
 };
 </script>

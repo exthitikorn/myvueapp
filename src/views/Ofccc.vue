@@ -9,8 +9,8 @@
         <thead>
           <tr>
             <th><i class=""></i>Type</th>
-            <th><i class=""></i>Lat</th>
-            <th><i class=""></i>Lng</th>
+            <th><i class=""></i>Latitude</th>
+            <th><i class=""></i>Longitude</th>
             <th><i class=""></i>OLT ID</th>
             <th><i class="info circle icon"></i></th>
             <th><i class="edit icon"></i></th>
@@ -24,19 +24,13 @@
           <td>{{ ofccc.olt_id }}</td>
           <td width="75" class="center aligned">
             <router-link :to="{ name: 'show-ofccc', params: { id: ofccc._id } }"
-              >Show</router-link
-            >
+              >Show</router-link>
           </td>
           <td width="75" class="center aligned">
             <router-link :to="{ name: 'edit-ofccc', params: { id: ofccc._id } }"
-              >Edit</router-link
-            >
+              >Edit</router-link>
           </td>
-          <td
-            width="75"
-            class="center aligned"
-            @click.prevent="onDestroy(ofccc._id)"
-          >
+          <td width="75" class="center aligned" @click.prevent="onDestroy(ofccc._id)">
             <a :href="`/ofcccs/${ofccc._id}`">Delete</a>
           </td>
         </tr>
