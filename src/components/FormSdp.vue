@@ -2,6 +2,10 @@
   <form action="#" @submit.prevent="onSubmit">
     <p v-if="errorsPresent" class="error">Please fill out both fields!</p>
     <div class="ui labeled input fluid">
+      <div class="ui label"><i class=""></i>SDP ID</div>
+      <input type="text" placeholder="Enter SDP ID..." v-model="sdp.sdp_Type" />
+    </div>
+    <div class="ui labeled input fluid">
       <div class="ui label"><i class=""></i>Type</div>
       <input type="text" placeholder="Enter Type..." v-model="sdp.sdp_Type" />
     </div>
@@ -44,6 +48,7 @@ export default {
       require: false,
       default: () => {
         return {
+          sdp_id: "",
           sdp_Type: "",
           sdp_Lat: "",
           sdp_Lng: "",
@@ -60,6 +65,7 @@ export default {
   methods: {
     onSubmit: function () {
       if (
+        this.sdp.sdp_id === "" ||
         this.sdp.sdp_Type === "" ||
         this.sdp.sdp_Lat === "" ||
         this.sdp.sdp_Lng === "" ||

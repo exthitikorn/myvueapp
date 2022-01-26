@@ -2,6 +2,10 @@
   <form action="#" @submit.prevent="onSubmit">
     <p v-if="errorsPresent" class="error">Please fill out both fields!</p>
     <div class="ui labeled input fluid">
+      <div class="ui label"><i class=""></i>OLT ID</div>
+      <input type="text" placeholder="Enter OLT ID..." v-model="olt.olt_id" />
+    </div>
+    <div class="ui labeled input fluid">
       <div class="ui label"><i class=""></i>Name</div>
       <input type="text" placeholder="Enter Name..." v-model="olt.olt_Name" />
     </div>
@@ -34,6 +38,7 @@ export default {
       require: false,
       default: () => {
         return {
+          olt_id: "",
           olt_Name: "",
           olt_Rack: "",
           olt_Shelf: "",
@@ -51,6 +56,7 @@ export default {
   methods: {
     onSubmit: function () {
       if (
+        this.olt.olt_id === "" ||
         this.olt.olt_Name === "" ||
         this.olt.olt_Rack === "" ||
         this.olt.olt_Shelf === "" ||

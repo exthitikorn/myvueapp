@@ -3,6 +3,10 @@
     <h1>Show SDP</h1>
     <flash-message></flash-message>
     <div class="ui labeled input fluid">
+      <div class="ui label"><i class=""></i> SDP ID</div>
+      <input type="text" readonly :value="sdp.sdp_id" />
+    </div>
+    <div class="ui labeled input fluid">
       <div class="ui label"><i class=""></i> Type</div>
       <input type="text" readonly :value="sdp.sdp_Type" />
     </div>

@@ -3,6 +3,10 @@
     <h1>Show OLT</h1>
     <flash-message></flash-message>
     <div class="ui labeled input fluid">
+      <div class="ui label"><i class=""></i> OLT ID</div>
+      <input type="text" readonly :value="olt.olt_id" />
+    </div>
+    <div class="ui labeled input fluid">
       <div class="ui label"><i class=""></i> Name</div>
       <input type="text" readonly :value="olt.olt_Name" />
     </div>

@@ -8,6 +8,7 @@
       <table id="olts" class="ui celled compact table">
         <thead>
           <tr>
+            <th><i class=""></i>OLT ID</th>
             <th><i class=""></i>Name</th>
             <th><i class=""></i>Rack</th>
             <th><i class=""></i>Shelf</th>
@@ -19,6 +20,7 @@
           </tr>
         </thead>
         <tr v-for="(olt, i) in olts" :key="i">
+          <td>{{ olt.olt_id }}</td>
           <td>{{ olt.olt_Name }}</td>
           <td>{{ olt.olt_Rack }}</td>
           <td>{{ olt.olt_Shelf }}</td>

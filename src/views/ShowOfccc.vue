@@ -3,6 +3,10 @@
     <h1>Show ofccc</h1>
     <flash-message></flash-message>
     <div class="ui labeled input fluid">
+      <div class="ui label"><i class=""></i> ofccc ID</div>
+      <input type="text" readonly :value="ofccc.ofccc_id" />
+    </div>
+    <div class="ui labeled input fluid">
       <div class="ui label"><i class=""></i> Type</div>
       <input type="text" readonly :value="ofccc.ofccc_Type" />
     </div>

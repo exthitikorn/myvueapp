@@ -8,6 +8,7 @@
       <table id="sdps" class="ui celled compact table">
         <thead>
           <tr>
+            <th><i class=""></i>SDP ID</th>
             <th><i class=""></i>Type</th>
             <th><i class=""></i>Lattitude</th>
             <th><i class=""></i>Longitude</th>
@@ -18,6 +19,7 @@
           </tr>
         </thead>
         <tr v-for="(sdp, i) in sdps" :key="i">
+          <td>{{ sdp.sdp_id }}</td>
           <td>{{ sdp.sdp_Type }}</td>
           <td>{{ sdp.sdp_Lat }}</td>
           <td>{{ sdp.sdp_Lng }}</td>

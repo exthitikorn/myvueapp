@@ -2,6 +2,14 @@
   <form action="#" @submit.prevent="onSubmit">
     <p v-if="errorsPresent" class="error">Please fill out both fields!</p>
     <div class="ui labeled input fluid">
+      <div class="ui label"><i class=""></i>ofccc ID</div>
+      <input
+        type="text"
+        placeholder="Enter ofccc ID..."
+        v-model="ofccc.ofccc_id"
+      />
+    </div>
+    <div class="ui labeled input fluid">
       <div class="ui label"><i class=""></i>Type</div>
       <input
         type="text"
@@ -44,6 +52,7 @@ export default {
       require: false,
       default: () => {
         return {
+          ofccc_id: "",
           ofccc_Type: "",
           ofccc_Lat: "",
           ofccc_Lng: "",
@@ -60,6 +69,7 @@ export default {
   methods: {
     onSubmit: function () {
       if (
+        this.ofccc.ofccc_id === "" ||
         this.ofccc.ofccc_Type === "" ||
         this.ofccc.ofccc_Lat === "" ||
         this.ofccc.ofccc_Lng === "" ||

@@ -8,6 +8,7 @@
       <table id="ofcccs" class="ui celled compact table">
         <thead>
           <tr>
+            <th><i class=""></i>ofccc ID</th>
             <th><i class=""></i>Type</th>
             <th><i class=""></i>Latitude</th>
             <th><i class=""></i>Longitude</th>
@@ -18,6 +19,7 @@
           </tr>
         </thead>
         <tr v-for="(ofccc, i) in ofcccs" :key="i">
+          <td>{{ ofccc.ofccc_id }}</td>
           <td>{{ ofccc.ofccc_Type }}</td>
           <td>{{ ofccc.ofccc_Lat }}</td>
           <td>{{ ofccc.ofccc_Lng }}</td>
