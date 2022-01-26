@@ -4,6 +4,10 @@ const { Schema } = mongoose;
 
 const sdpSchema = new Schema(
     {
+        sdp_id: {
+            type: String,
+            required: 'Id cannot be blank'
+        },
         sdp_Type: {
             type: String,
             required: 'Type cannot be blank'

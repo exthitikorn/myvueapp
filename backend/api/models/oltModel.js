@@ -4,6 +4,10 @@ const { Schema } = mongoose;
 
 const oltSchema = new Schema(
     {
+        olt_id: {
+            type: String,
+            required: 'Id cannot be blank'
+        },
         olt_Name: {
             type: String,
             required: 'Name cannot be blank'

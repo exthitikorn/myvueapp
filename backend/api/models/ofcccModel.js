@@ -4,6 +4,10 @@ const { Schema } = mongoose;
 
 const ofcccSchema = new Schema(
     {
+        ofccc_id: {
+            type: String,
+            required: 'Id cannot be blank'
+        },
         ofccc_Type: {
             type: String,
             required: 'Type cannot be blank'
