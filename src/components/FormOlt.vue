@@ -3,31 +3,31 @@
     <p v-if="errorsPresent" class="error">Please fill out both fields!</p>
     <div class="ui labeled input fluid">
       <div class="ui label">
-        <i class="calendar plus icon"></i>Name
+        <i class=""></i>Name
       </div>
       <input type="text" placeholder="Enter Name..." v-model="olt.olt_Name" />
     </div>
     <div class="ui labeled input fluid">
       <div class="ui label">
-        <i class="calendar plus icon"></i>Rack
+        <i class=""></i>Rack
       </div>
       <input type="text" placeholder="Enter Rack..." v-model="olt.olt_Rack" />
     </div>
     <div class="ui labeled input fluid">
       <div class="ui label">
-        <i class="calendar plus icon"></i>Shelf
+        <i class=""></i>Shelf
       </div>
       <input type="text" placeholder="Enter Shelf..." v-model="olt.olt_Shelf" />
     </div>
     <div class="ui labeled input fluid">
       <div class="ui label">
-        <i class="calendar plus icon"></i>Slot
+        <i class=""></i>Slot
       </div>
       <input type="text" placeholder="Enter Slot..." v-model="olt.olt_Slot" />
     </div>
     <div class="ui labeled input fluid">
       <div class="ui label">
-        <i class="calendar plus icon"></i>Port
+        <i class=""></i>Port
       </div>
       <input type="text" placeholder="Enter Port..." v-model="olt.olt_Port" />
     </div>

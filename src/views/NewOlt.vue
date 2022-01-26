@@ -17,8 +17,8 @@ export default {
   methods: {
     createOrUpdate: async function (olt) {
       const res = await api.createolt(olt);
-      this.flash("olt created", "success");
-      this.$router.push(`/lots/${res._id}`);
+      this.flash("OLT created", "success");
+      this.$router.push(`/olts/${res._id}`);
     },
   },
 };

@@ -8,12 +8,12 @@
       <table id="olts" class="ui celled compact table">
         <thead>
           <tr>
-            <th><i class="calendar plus icon"></i>Name</th>
-            <th><i class="info circle icon"></i>Rack</th>
-            <th><i class="info circle icon"></i>Shelf</th>
-            <th><i class="info circle icon"></i>Slot</th>
-            <th><i class="info circle icon"></i>Port</th>
-            <th><i class="lock open icon"></i></th>
+            <th><i class=""></i>Name</th>
+            <th><i class=""></i>Rack</th>
+            <th><i class=""></i>Shelf</th>
+            <th><i class=""></i>Slot</th>
+            <th><i class=""></i>Port</th>
+            <th><i class="info circle icon"></i></th>
             <th><i class="edit icon"></i></th>
             <th><i class="trash icon"></i></th>
           </tr>

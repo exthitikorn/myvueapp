@@ -8,11 +8,11 @@
       <table id="ofcccs" class="ui celled compact table">
         <thead>
           <tr>
-            <th><i class="calendar plus icon"></i>Type</th>
-            <th><i class="info circle icon"></i>Lat</th>
-            <th><i class="info circle icon"></i>Lng</th>
-            <th><i class="info circle icon"></i>OLT ID</th>
-            <th><i class="lock open icon"></i></th>
+            <th><i class=""></i>Type</th>
+            <th><i class=""></i>Lat</th>
+            <th><i class=""></i>Lng</th>
+            <th><i class=""></i>OLT ID</th>
+            <th><i class="info circle icon"></i></th>
             <th><i class="edit icon"></i></th>
             <th><i class="trash icon"></i></th>
           </tr>

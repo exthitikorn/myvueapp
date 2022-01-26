@@ -23,7 +23,7 @@
       <div class="ui label">
         <i class=""></i>ofccc ID
       </div>
-      <input type="text" placeholder="Enter OLT ID..." v-model="sdp.ofccc_id" />
+      <input type="text" placeholder="Enter ofccc ID..." v-model="sdp.ofccc_id" />
     </div>
     <button class="positive ui button">Submit</button>
   </form>
