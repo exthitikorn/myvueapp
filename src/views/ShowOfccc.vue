@@ -8,7 +8,6 @@
     </div>
     <div class="ui labeled input fluid">
       <div class="ui label"><i class="info circle icon"></i> Lat</div>
-      <!-- <label>{{ ofccc.ofccc_Lat }}</label> -->
       <input type="number" step="0.000000000000001" readonly :value="ofccc.ofccc_Lat" />
     </div>
     <div class="ui labeled input fluid">

@@ -11,6 +11,7 @@ Vue.use(VueFlashMessage, {
 const vm = new Vue();
 const oltURL = 'http://localhost:3000/olts/';
 const ofcccURL = 'http://localhost:3000/ofcccs/';
+const sdpURL = 'http://localhost:3000/sdps/';
 const handleError = fn => (...params) =>
   fn(...params).catch(error => {
     vm.flash(`${error.response.status}: ${error.response.statusText}`, 'error');
@@ -56,6 +57,27 @@ export const api = {
   }),
   updateofccc: handleError(async payload => {
     const res = await axios.put(ofcccURL + payload._id, payload);
+    return res.data;
+  }),
+  //SDP api
+  getsdp: handleError(async id => {
+    const res = await axios.get(sdpURL + id);
+    return res.data;
+  }),
+  getsdps: handleError(async () => {
+    const res = await axios.get(sdpURL);
+    return res.data;
+  }),
+  deletesdp: handleError(async id => {
+    const res = await axios.delete(sdpURL + id);
+    return res.data;
+  }),
+  createsdp: handleError(async payload => {
+    const res = await axios.post(sdpURL, payload);
+    return res.data;
+  }),
+  updatesdp: handleError(async payload => {
+    const res = await axios.put(sdpURL + payload._id, payload);
     return res.data;
   })
 };
