@@ -3,7 +3,7 @@
     <p v-if="errorsPresent" class="error">Please fill out both fields!</p>
     <div class="ui labeled input fluid">
       <div class="ui label"><i class=""></i>SDP ID</div>
-      <input type="text" placeholder="Enter SDP ID..." v-model="sdp.sdp_Type" />
+      <input type="text" placeholder="Enter SDP ID..." v-model="sdp.sdp_id" />
     </div>
     <div class="ui labeled input fluid">
       <div class="ui label"><i class=""></i>Type</div>
