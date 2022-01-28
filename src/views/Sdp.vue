@@ -24,6 +24,10 @@
           <td>{{ sdp.sdp_Lat }}</td>
           <td>{{ sdp.sdp_Lng }}</td>
           <td>{{ sdp.ofccc_id }}</td>
+          <!-- <td width="75" class="center aligned">
+            <router-link :to="{ name: 'show-ofccc', params: { id: sdp.ofccc_id } }"
+              >{{ sdp.ofccc_id }}</router-link>
+          </td> -->
           <td width="75" class="center aligned">
             <router-link :to="{ name: 'show-sdp', params: { id: sdp._id } }"
               >Show</router-link>

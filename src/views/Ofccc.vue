@@ -24,6 +24,10 @@
           <td>{{ ofccc.ofccc_Lat }}</td>
           <td>{{ ofccc.ofccc_Lng }}</td>
           <td>{{ ofccc.olt_id }}</td>
+          <!-- <td width="75" class="center aligned">
+            <router-link :to="{ name: 'show-olt', params: { id: ofccc.olt_id } }"
+              >{{ ofccc.olt_id }}</router-link>
+          </td> -->
           <td width="75" class="center aligned">
             <router-link :to="{ name: 'show-ofccc', params: { id: ofccc._id } }"
               >Show</router-link>

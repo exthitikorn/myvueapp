@@ -22,7 +22,8 @@ const ofcccSchema = new Schema(
         },
         olt_id: {
             type: String,
-            required: 'Id cannot be blank'
+            required: 'Id cannot be blank',
+            // type: Schema.Types.ObjectId
         }
     },
     { collection: 'ofccc' }

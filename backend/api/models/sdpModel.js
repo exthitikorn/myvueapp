@@ -22,7 +22,8 @@ const sdpSchema = new Schema(
         },
         ofccc_id: {
             type: String,
-            required: 'Id cannot be blank'
+            required: 'Id cannot be blank',
+            // type: Schema.Types.ObjectId
         }
     },
     { collection: 'sdp' }
